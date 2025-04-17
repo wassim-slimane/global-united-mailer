@@ -1,5 +1,9 @@
 {
   "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch ./src/app.js",
+    "prod": "NODE_ENV=production node ./src/app.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

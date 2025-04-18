@@ -21,9 +21,9 @@ app.use('/mailer/api/check-connection', (req, res, next) => {
 // Routes
 app.post('/mailer/api/contact', (req, res, next) => {
     const form = req.body;
-    //const sanitizedForm = sanitizeForm(form);
+    const sanitizedForm = sanitizeForm(form);
 
-    sendEmail(form).then((result) => {
+    sendEmail(sanitizedForm).then((result) => {
         res.status(200).send(result);
     }).catch((err) => {
         res.status(400).send(err.message);

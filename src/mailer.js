@@ -15,8 +15,8 @@ async function sendEmail(form) {
     const mailOptions = {
         from: process.env.EMAIL_FROM,
         to: process.env.EMAIL_TO,
-        subject: 'EMAIL FROM PORTFOLIO',
-        text: `Subject: ${form.subject}, Name: ${form.name}, Email: ${form.email}, Message: ${form.message}`,
+        subject: 'GLOBAL UNITED FC - Pre-Registration',
+        text: `Name: ${form.fullName}, Age: ${form.age}, Email: ${form.email}, Message: ${form.message}`,
         html: htmlToSend
     };
 
